@@ -6,7 +6,10 @@ use Illuminate\Http\Request;
 
 class postController extends Controller
 {
-    function getAllPosts()
+    /**
+     * Display a listing of the resource.
+     */
+    public function index()
     {
         $posts = [
             [
@@ -17,18 +20,66 @@ class postController extends Controller
             ],
             [
                 'id' => 2,
-                'title' => 'What is language ? ',
+                'title' => 'What is Programming language ? ',
                 'body' => 'PHP',
                 'posted_by' => 'Ahmed'
             ],
             [
                 'id' => 3,
                 'title' => 'What is Design Pattern ?',
-                'body' => 'Use MVC',
+                'body' => 'MVC',
                 'posted_by' => 'Ali'
             ],
         ];
 
-        return view('post', ['allposts' => $posts]);
+        return view('posts.index', ['allposts' => $posts]);
+    }
+
+    /**
+     * Show the form for creating a new resource.
+     */
+    public function create()
+    {
+        //
+    }
+
+    /**
+     * Store a newly created resource in storage.
+     */
+    public function store(Request $request)
+    {
+        //
+    }
+
+    /**
+     * Display the specified resource.
+     */
+    public function show(string $id)
+    {
+        //
+    }
+
+    /**
+     * Show the form for editing the specified resource.
+     */
+    public function edit(string $id)
+    {
+        //
+    }
+
+    /**
+     * Update the specified resource in storage.
+     */
+    public function update(Request $request, string $id)
+    {
+        //
+    }
+
+    /**
+     * Remove the specified resource from storage.
+     */
+    public function destroy(string $id)
+    {
+        //
     }
 }
