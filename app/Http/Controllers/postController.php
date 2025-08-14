@@ -54,9 +54,17 @@ class postController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(string $id)
+    public function show($post)
     {
-        //
+        $post = [
+
+            'id' => 1,
+            'title' => 'What is framework ? ',
+            'body' => 'Laravel FrameWork',
+            'posted_by' => 'Mohamed'
+
+        ];
+        return view('posts.view', ['postDetails' => $post]);
     }
 
     /**

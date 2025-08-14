@@ -38,3 +38,5 @@ Route::get('/posts', function () {
 */
 
 Route::get('/posts', [postController::class, 'index']);
+
+Route::get('/posts/{post}', [postController::class, 'show'])->where(['post' => '[0-9]+']);
