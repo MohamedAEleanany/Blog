@@ -37,6 +37,8 @@ Route::get('/posts', function () {
 });
 */
 
-Route::get('/posts', [postController::class, 'index']);
-
-Route::get('/posts/{post}', [postController::class, 'show'])->where(['post' => '[0-9]+']);
+Route::get('/posts', [postController::class, 'index'])->name('post.index');
+Route::get('/posts/create', [postController::class, 'create'])->name('post.create');
+Route::post('/posts', [postController::class, 'create'])->name('post.store');
+Route::get('/posts/{post}', [postController::class, 'show'])->name('posts.show')->where(['post' => '[0-9]+']);
+Route::delete('/posts/{post}', [postController::class, 'destroy'])->name('posts.destroy');

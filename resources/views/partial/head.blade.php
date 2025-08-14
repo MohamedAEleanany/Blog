@@ -7,23 +7,5 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
-    <title>Posts</title>
+    <title>@yield('title')</title>
 </head>
-
-<body class="container">
-
-    @include('partial.navbar')
-    <div class="card">
-        <div class="card-header">
-            Post Details created by {{ $postDetails['posted_by'] }}
-        </div>
-        <div class="card-body">
-            <h5 class="card-title">{{ $postDetails['title'] }}</h5>
-            <p class="card-text">{{ $postDetails['body'] }}</p>
-
-        </div>
-    </div>
-
-</body>
-
-</html>
