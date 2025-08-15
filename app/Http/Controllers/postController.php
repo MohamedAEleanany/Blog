@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Post;
 use Illuminate\Http\Request;
 
 class postController extends Controller
@@ -11,6 +12,7 @@ class postController extends Controller
      */
     public function index()
     {
+        /*
         $posts = [
             [
                 'id' => 1,
@@ -30,7 +32,9 @@ class postController extends Controller
                 'body' => 'MVC',
                 'posted_by' => 'Ali'
             ],
-        ];
+        ];*/
+
+        $posts = Post::all();
 
         return view('posts.index', ['allposts' => $posts]);
     }

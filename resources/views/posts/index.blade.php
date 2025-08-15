@@ -10,7 +10,7 @@
                 <th scope="col">#</th>
                 <th scope="col">title</th>
                 <th scope="col">body</th>
-                <th scope="col">postedby</th>
+                <th scope="col">created_at</th>
                 <th scope="col">actions</th>
             </tr>
         </thead>
@@ -20,8 +20,8 @@
 
                     <td>{{ $post['id'] }}</td>
                     <td>{{ $post['title'] }}</td>
-                    <td>{{ $post['body'] }}</td>
-                    <td>{{ $post['posted_by'] }}</td>
+                    <td>{{ $post['description'] }}</td>
+                    <td>{{ $post['created_at'] }}</td>
                     <td class="col">
                         <a href="{{ route('posts.show', ['post' => $post['id']]) }}" class="btn btn-info">View</a>
                         <a href="" class="btn btn-warning">Edit</a>
